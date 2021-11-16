@@ -1,0 +1,23 @@
+create env..
+
+activate env
+
+pip install django
+pip install django-import-export
+or pip install -r requirements.txt
+
+# settings.py
+INSTALLED_APPS = (
+    ...
+    'import_export',
+)
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+python manage.py collectstatic
+
+created models.py
+
+
+set admin.py
